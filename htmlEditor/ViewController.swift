@@ -24,14 +24,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func save(_ sender: Any) {
-        document?.htmlContent = textField.text
-        if document?.htmlContent != nil {
+        document?.text = textField.text
+        if document?.text != nil {
             self.document?.updateChangeCount(.done)
         }
     }
     
-    @IBAction func assembleButton(_ sender: Any) {
+    @IBAction func assembleButton(_ sender: UIBarButtonItem) {
+            save(sender)
           performSegue(withIdentifier: "ViewSegue", sender: sender)
+        document?.close()
     }
     
     var tags: [Tags] = [Tags(title: "b", content: "<b></b>"),
@@ -52,7 +54,7 @@ class ViewController: UIViewController {
     func openDocument() {
         document?.open { success in
             if success {
-                self.textField.text = self.document?.htmlContent
+                self.textField.text = self.document?.text
             }
         }
     }
@@ -73,7 +75,7 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ViewSegue" {
             if let detailViewController = segue.destination as? WebViewController {
-                detailViewController.htmlContent = document?.htmlContent ?? "Something wrong"
+                detailViewController.htmlContent = document?.text
             }
         }
     }

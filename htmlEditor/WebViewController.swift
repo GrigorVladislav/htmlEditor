@@ -11,7 +11,7 @@ import WebKit
 
 class WebViewController:UIViewController, WKUIDelegate {
     
-    var htmlContent: String = ""
+    var htmlContent: String?
     var webView: WKWebView!
     
     override func loadView() {
@@ -22,7 +22,13 @@ class WebViewController:UIViewController, WKUIDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        webView.loadHTMLString(htmlContent, baseURL: nil)
-    }
+        
+        if htmlContent != nil{
+        
+            webView.loadHTMLString(htmlContent!, baseURL: nil)
+        }else {
+            navigationController?.popViewController(animated: true)
+        }
 
+}
 }
