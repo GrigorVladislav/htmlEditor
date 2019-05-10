@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -78,27 +78,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hM1-CU-nH3">
-                                <rect key="frame" x="84.5" y="600" width="206" height="47"/>
-                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Show in browser">
-                                    <color key="titleColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="assembleButton:" destination="M2k-L8-Olo" eventType="touchUpInside" id="KrW-xs-Y7x"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="BoZ-jc-2Y8" firstAttribute="trailing" secondItem="QQA-5q-8ZX" secondAttribute="trailing" constant="16" id="5Dx-QI-L2J"/>
-                            <constraint firstItem="hM1-CU-nH3" firstAttribute="top" secondItem="QQA-5q-8ZX" secondAttribute="bottom" constant="43" id="8lN-8U-doy"/>
                             <constraint firstItem="QQA-5q-8ZX" firstAttribute="leading" secondItem="BoZ-jc-2Y8" secondAttribute="leading" constant="16" id="GHM-Nh-Y2s"/>
-                            <constraint firstItem="8xk-Dh-zaT" firstAttribute="centerX" secondItem="hM1-CU-nH3" secondAttribute="centerX" id="IWU-4z-Eb8"/>
-                            <constraint firstItem="hM1-CU-nH3" firstAttribute="top" secondItem="QQA-5q-8ZX" secondAttribute="bottom" constant="43" id="MhA-Ra-yJ6"/>
-                            <constraint firstItem="BoZ-jc-2Y8" firstAttribute="bottom" secondItem="hM1-CU-nH3" secondAttribute="bottom" constant="20" id="QWD-Mp-bb1"/>
+                            <constraint firstItem="BoZ-jc-2Y8" firstAttribute="bottom" secondItem="QQA-5q-8ZX" secondAttribute="bottom" constant="110" id="Lq7-VD-RDd"/>
                             <constraint firstItem="8xk-Dh-zaT" firstAttribute="trailing" secondItem="BoZ-jc-2Y8" secondAttribute="trailing" id="Trt-36-6d9"/>
                             <constraint firstItem="8xk-Dh-zaT" firstAttribute="top" secondItem="BoZ-jc-2Y8" secondAttribute="top" id="iTh-ow-sqE"/>
                             <constraint firstItem="QQA-5q-8ZX" firstAttribute="top" secondItem="8xk-Dh-zaT" secondAttribute="bottom" constant="8" id="ijV-Zr-47u"/>
@@ -107,12 +92,26 @@
                         <viewLayoutGuide key="safeArea" id="BoZ-jc-2Y8"/>
                     </view>
                     <navigationItem key="navigationItem" id="59W-Vv-eks">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="1qx-0p-GIO">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="done:" destination="M2k-L8-Olo" id="ZLo-l3-krY"/>
                             </connections>
                         </barButtonItem>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hM1-CU-nH3">
+                            <rect key="frame" x="84.5" y="0.0" width="206" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                            <state key="normal" title="Show in browser">
+                                <color key="titleColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="assembleButton:" destination="M2k-L8-Olo" eventType="touchUpInside" id="KrW-xs-Y7x"/>
+                            </connections>
+                        </button>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="URA-dk-wbk">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
